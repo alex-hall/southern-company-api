@@ -1,8 +1,8 @@
 /* Interfaces */
-import {Company, AccountType} from './general';
+import { Company, AccountType } from './general';
 
-declare namespace API{
-	export interface Account{
+declare namespace API {
+	export interface Account {
 		UserSid: string;
 		AccountNumber: number;
 		Company: Company;
@@ -20,7 +20,7 @@ declare namespace API{
 		PremiseNumber: null;
 		IsPrePayAccount: boolean;
 	}
-	export interface AccountDetails{
+	export interface AccountDetails {
 		AccountOpenedDate: Date;
 		AccountClosedDate: Date;
 		ServiceAccountType: number;
@@ -31,21 +31,21 @@ declare namespace API{
 		IsOneTimePayEligible: boolean
 		IsPaperlessEligible: boolean
 		BillDeliveryOption: {
-				accountNumber: number
-				accountNumberDisplay: string
-				deliveryType: number
-				emailAddress: string;
-				sendEmail: boolean;
-				remindersChecked: boolean;
-				reminderDays: number;
-				deliveryAction: number;
-				dtCreate: Date;
-				emailChangeOnly: boolean;
-				emailValidationRequired: boolean;
-				autoValidate: boolean;
-				sendSomewhereElse: boolean;
-				billCodeDeliveryType: number;
-				requestSource: null
+			accountNumber: number
+			accountNumberDisplay: string
+			deliveryType: number
+			emailAddress: string;
+			sendEmail: boolean;
+			remindersChecked: boolean;
+			reminderDays: number;
+			deliveryAction: number;
+			dtCreate: Date;
+			emailChangeOnly: boolean;
+			emailValidationRequired: boolean;
+			autoValidate: boolean;
+			sendSomewhereElse: boolean;
+			billCodeDeliveryType: number;
+			requestSource: null
 		}
 		BillCodeDeliveryType: number;
 		BillDraftType: number;
@@ -77,29 +77,29 @@ declare namespace API{
 		SSN: string;
 		CustomerName: string;
 		LocalAddress: {
-				Number: string;
-				Structure: string;
-				Note: string;
-				PreDirection: string;
-				StreetName: string;
-				PostDirection: string;
-				StreetType: string;
-				AddressLine1: string;
-				AddressLine2: string;
-				AddressLine3: string;
-				City: string;
-				State: string;
-				Zip: string;
+			Number: string;
+			Structure: string;
+			Note: string;
+			PreDirection: string;
+			StreetName: string;
+			PostDirection: string;
+			StreetType: string;
+			AddressLine1: string;
+			AddressLine2: string;
+			AddressLine3: string;
+			City: string;
+			State: string;
+			Zip: string;
 		}
 		Home: {
-				AreaCode: string;
-				Number: string;
-				Extension: string;
+			AreaCode: string;
+			Number: string;
+			Extension: string;
 		}
 		Business: {
-				AreaCode: string;
-				Number: string;
-				Extension: string;
+			AreaCode: string;
+			Number: string;
+			Extension: string;
 		}
 		IsPrePay: boolean
 		IsClosedPrePay: boolean;
@@ -112,7 +112,7 @@ declare namespace API{
 		LastName: string;
 		MiddleName: string;
 	}
-	export interface MyPowerUsageResponse{
+	export interface MyPowerUsageResponse {
 		Data: string;
 		HighTempIndex: number;
 		LowTempIndex: number;
@@ -128,14 +128,14 @@ declare namespace API{
 		Days: number;
 		DollarsToDate: null;
 		TotalkWhUsed: number;
-		HasData:boolean;
+		HasData: boolean;
 		HasEstimatedBill: boolean;
 		IsPartialMonth: boolean;
 		RemainingDays: number;
 		DaysToDate: number;
 	}
 
-	export interface GraphDataSeries{
+	export interface GraphDataSeries {
 		type: string;
 		scales: string;
 		values: GraphSetSeriesValue[];
@@ -149,7 +149,7 @@ declare namespace API{
 		tooltip: object;
 		"legend-marker": object;
 	}
-	export interface GraphSetRule{
+	export interface GraphSetRule {
 		rule: string;
 		"background-color": string;
 		"border-color": string;
@@ -158,7 +158,7 @@ declare namespace API{
 		"tooltip-text": string;
 		"font-color": string;
 	}
-	export interface GraphSetSeriesValue{
+	export interface GraphSetSeriesValue {
 		[key: number]: number;
 	}
 	export interface AllBills {
@@ -173,7 +173,7 @@ declare namespace API{
 		propertyManager?: any;
 		accounts?: Account[];
 		currentAccount?: any;
-	
+
 		LocalAddress: {
 			number?: string;
 			structure?: string;
@@ -189,7 +189,7 @@ declare namespace API{
 			state?: string;
 			zip?: string;
 		}
-	
+
 		Bill: {
 			accountNumber?: any;
 			opCo?: number;
@@ -251,7 +251,7 @@ declare namespace API{
 			isRestrictedPaymentDateToToday?: boolean;
 			restrictedPaymentDateToTodayHelpText?: any;
 		}
-	
+
 		Account: {
 			userSid?: string;
 			accountNumber?: any;
@@ -287,7 +287,7 @@ declare namespace API{
 			middleName?: any;
 			isInGulfDivestiturePilot?: boolean;
 		}
-	
+
 		BillDeliveryOption: {
 			accountNumber?: number;
 			accountNumberDisplay?: string;
@@ -305,7 +305,7 @@ declare namespace API{
 			billCodeDeliveryType?: number;
 			requestSource?: any;
 		}
-	
+
 		LocalAddress2: {
 			number?: string;
 			structure?: string;
@@ -321,19 +321,19 @@ declare namespace API{
 			state?: string;
 			zip?: string;
 		}
-	
+
 		Home: {
 			areaCode?: string;
 			number?: string;
 			extension?: string;
 		}
-	
+
 		Business: {
 			areaCode?: string;
 			number?: string;
 			extension?: string;
 		}
-	
+
 		CurrentAccount: {
 			accountOpenedDate?: Date;
 			accountClosedDate?: Date;
@@ -392,4 +392,5 @@ declare namespace API{
 			middleName?: string;
 			isInGulfDivestiturePilot?: boolean;
 		}
+	}
 }
